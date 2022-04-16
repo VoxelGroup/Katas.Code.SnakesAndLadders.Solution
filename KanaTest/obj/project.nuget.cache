@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "5QELVHWC3mMkO1yp9LhY1Ec3UDxwy917oh0l4QnLzop1IWvRJQAS1NN/J7uNsacl7Le0R08d5guFFS76yxgzmA==",
+  "success": true,
+  "projectFilePath": "D:\\Kana\\KanaTest\\KanaTest.UnitTests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emmca\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
+    "C:\\Users\\emmca\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
+    "C:\\Users\\emmca\\.nuget\\packages\\microsoft.net.test.sdk\\16.9.4\\microsoft.net.test.sdk.16.9.4.nupkg.sha512",
+    "C:\\Users\\emmca\\.nuget\\packages\\nunit\\3.13.1\\nunit.3.13.1.nupkg.sha512",
+    "C:\\Users\\emmca\\.nuget\\packages\\nunit3testadapter\\3.17.0\\nunit3testadapter.3.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}
