@@ -6,4 +6,4 @@ D:\Kana\Kana\obj\Debug\net46\Kana.AssemblyInfo.cs
 D:\Kana\Kana\obj\Debug\net46\Kana.csproj.CoreCompileInputs.cache
 D:\Kana\Kana\obj\Debug\net46\Kana.exe
 D:\Kana\Kana\obj\Debug\net46\Kana.pdb
-D:\Kana\Kana\obj\Debug\net46\Kana.csproj.AssemblyReference.cache
+D:\Kana\Kana\obj\Debug\net46\Kana.csprojAssemblyReference.cache

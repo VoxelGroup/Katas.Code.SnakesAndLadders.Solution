@@ -27,7 +27,6 @@
         },
         "frameworks": {
           "net46": {
-            "targetAlias": "net46",
             "projectReferences": {
               "D:\\Kana\\Kana\\Kana.csproj": {
                 "projectPath": "D:\\Kana\\Kana\\Kana.csproj"
@@ -43,7 +42,6 @@
       },
       "frameworks": {
         "net46": {
-          "targetAlias": "net46",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -62,7 +60,7 @@
               "version": "[3.0.2, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -89,7 +87,6 @@
         },
         "frameworks": {
           "net46": {
-            "targetAlias": "net46",
             "projectReferences": {}
           }
         },
@@ -101,8 +98,7 @@
       },
       "frameworks": {
         "net46": {
-          "targetAlias": "net46",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

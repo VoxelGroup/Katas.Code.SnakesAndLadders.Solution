@@ -8,39 +8,45 @@ namespace Kana
 {
     public class Square
     {
-        public int Number { get; set; }
-        public int NextPos { get; set; }
-        public bool Type { get; set; }
-        public List<Player> Players { get; set; }
+        private int Number { get; set; }
+        private int NextPos { get; set; }
+        private bool Type { get; set; }
 
         public Square(int number)
         {
             Number = number;
-            Players = new List<Player>();
             Type = false;
         }
 
-        /**
-         * 0 Ladder
-         * 1 Snake
-         */
         public Square(int number, int nextPos)
         {
             Number = number;
             NextPos = nextPos;
             Type = true;
-        }              
-        
-        public int GetToken()
+        }
+
+        /**
+         * <summary>Returns the position of the square</summary>
+         * <returns>Int with the square name</returns>
+         */
+        public int GetNumber()
         {
             return Number;
         }
 
+        /**
+         * <summary>Returns the type of the squre</summary>
+         * <returns>True if it's a special square or false if not</returns>
+         */
         public bool IsSpecialSquare()
         {
             return Type;
         }
 
+        /**
+         * <summary>Returns the special position of a special square</summary>
+         * <returns>Int with the new posotion or null if it's not a special square</returns>
+         */
         public int? GetNextPos()
         {
             return NextPos;

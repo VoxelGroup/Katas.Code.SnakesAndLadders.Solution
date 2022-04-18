@@ -34,6 +34,9 @@ namespace Kana
             GenerateBoard();
         }
 
+        /**
+         * <summary>Change the state of the game to true if there are two or more players</summary>
+         */
         public void Start()
         {
             if (Players.Count > 1)
@@ -43,11 +46,18 @@ namespace Kana
             }            
         }
 
+        /**
+         * <summary>Returns what's the state of the game</summary>
+         * <returns>Boolean with true or false with the state of the game</returns>
+         */
         public bool GetGameState()
         {
             return IsStarted;
         }
 
+        /**
+         * <summary>Generates the game board with the special squares</summary>
+         */
         private void GenerateBoard()
         {
             for (int i = 1; i <= BoardSize; i++)
@@ -56,7 +66,7 @@ namespace Kana
 
                 for (int e = 0; e < SpecialSquares.Count; e++)
                 {
-                    if (SpecialSquares[e].GetToken() == i)
+                    if (SpecialSquares[e].GetNumber() == i)
                     {
                         hasSpecial = true;
                         Board.Add(SpecialSquares[e]);
@@ -71,6 +81,10 @@ namespace Kana
             }
         }
 
+        /**
+         * <summary>Adds a player to the game</summary>
+         * <param name="playerName">String with the name of the player</param>
+         */
         public void AddPlayer(string playerName)
         {
             if (!IsStarted)
@@ -79,6 +93,10 @@ namespace Kana
             }
         }
 
+        /**
+         * <summary>Returns a number between 1-6 (both included)</summary>
+         * <returns>An integer between 1-6 (both included) or null if game it's not started</returns>
+         */
         public int? RollDice()
         {
             if (IsStarted)
@@ -90,6 +108,9 @@ namespace Kana
             return null;
         }
 
+        /**
+         * <summary>Handles game turns</summary>
+         */
         private void EndTurn()
         {
             if (IsStarted)
@@ -105,6 +126,11 @@ namespace Kana
             }
         }
 
+        /**
+         * <summary>Moves the player as many positions as he rolled</summary>
+         * <param name="player">The player who moves</param>
+         * <param name="roll">The number of positions the player moves</param>         
+         */
         public void Move(int? roll, Player player)
         {
             if (IsStarted && roll.HasValue)
@@ -135,6 +161,11 @@ namespace Kana
             }
         }
 
+        /**
+         * <summary>Checks if the roll if valid</summary>
+         * <param name="roll">Position where the player will move</param>
+         * <returns>True if player can do that move, false if it's greater than the board size or null if game isn't started</returns>
+         */
         private bool? CheckValid(int roll)
         {
             if (IsStarted)
@@ -151,11 +182,18 @@ namespace Kana
             return null;
         }
 
+        /**
+         * <summary>Change the state of the game to false</summary>
+         */
         private void Stop()
         {
             IsStarted = false;            
         }
 
+        /**
+         * <summary>Returns the Winner of the game</summary>
+         * <returns>The player who won the game or null if there isn't a winner yet</returns>
+         */
         public Player GetWinner()
         {
             if (Winner != null)
@@ -165,11 +203,19 @@ namespace Kana
             return null;
         }
 
+        /**
+         * <summary>Returns a list with all players</summary>
+         * <returns>A list with all players</returns>
+         */
         public List<Player> GetPlayers()
         {
             return Players;
         }
 
+        /**
+         * <summary>Returns the player who is playing at that moment</summary>
+         * <returns>The player who is playing at that turn</returns>
+         */
         public Player GetPlayer()
         {
             return Players[PlayerTurn];

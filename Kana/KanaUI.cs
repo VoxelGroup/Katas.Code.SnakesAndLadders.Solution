@@ -53,7 +53,7 @@ namespace Kana
 
         private void TurnInfo(Player player)
         {
-            Console.WriteLine($"It's your trun, {player.GetPlayerName()}. You're at position {player.GetToken()}");
+            Console.WriteLine($"It's your turn, {player.GetPlayerName()}. You're at position {player.GetToken()}");
         }
 
         private int RollDice()
@@ -65,7 +65,7 @@ namespace Kana
 
             if (roll.HasValue)
             {
-                Console.WriteLine($"\nYou got a {roll.Value}");
+                Console.WriteLine($"\nYou rolled a {roll.Value}");
                 return roll.Value;
             }
             else
