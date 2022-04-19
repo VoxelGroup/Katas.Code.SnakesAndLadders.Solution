@@ -7,12 +7,15 @@ namespace Kana
     {
         private bool IsStarted { get; set; }        
         private int PlayerTurn { get; set;  }
-        private List<Player> Players { get; set; }
+        private List<Player> Players { get; }
         private int BoardSize { get; set; }
         private Player Winner { get; set; }
-        private List<Square> Board { get; set; }
-        private List<Square> SpecialSquares { get;  set; }
+        private List<Square> Board { get; }
+        private List<Square> SpecialSquares { get; }
 
+        /**
+         * <summary>Initializes a new instance of the <see cref="KanaGame{T}"/> class</summary>
+         */
         public KanaGame()
         {
             IsStarted = false;
@@ -34,16 +37,25 @@ namespace Kana
             GenerateBoard();
         }
 
+        public bool CanStart()
+        {
+            if (Players.Count > 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         /**
          * <summary>Change the state of the game to true if there are two or more players</summary>
          */
         public void Start()
         {
-            if (Players.Count > 1)
-            {
-                IsStarted = true;
-                PlayerTurn = 0;
-            }            
+            IsStarted = true;
+            PlayerTurn = 0;                     
         }
 
         /**
@@ -87,10 +99,7 @@ namespace Kana
          */
         public void AddPlayer(string playerName)
         {
-            if (!IsStarted)
-            {
-                Players.Add(new Player(playerName, Board[0]));
-            }
+             Players.Add(new Player(playerName, Board[0]));         
         }
 
         /**
@@ -99,11 +108,12 @@ namespace Kana
          */
         public int? RollDice()
         {
-            if (IsStarted)
+            if (GetGameState())
             {
                 var random = new Random();
 
-                return random.Next(1, 6);
+                // generates a number between 1-6
+                return random.Next(1, 7);
             }
             return null;
         }
@@ -113,7 +123,7 @@ namespace Kana
          */
         private void EndTurn()
         {
-            if (IsStarted)
+            if (GetGameState())
             {
                 if (PlayerTurn + 1 >= Players.Count)
                 {
@@ -133,7 +143,7 @@ namespace Kana
          */
         public void Move(int? roll, Player player)
         {
-            if (IsStarted && roll.HasValue)
+            if (GetGameState() && roll.HasValue)
             {                
                 if (player != null)
                 {

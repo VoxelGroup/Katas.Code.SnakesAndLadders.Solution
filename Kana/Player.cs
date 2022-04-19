@@ -11,6 +11,11 @@ namespace Kana
         private string PlayerName { get; }
         private Square Token { get; set; }
 
+        /**
+         * <summary>Initializes a new instance of the Player class</summary>sa
+         * <param name="playerName">A String with the player name</param>
+         * <param name="position">A instance of the square the player is placed</param>
+         */
         public Player(string playerName, Square position)
         {
             PlayerName = playerName;

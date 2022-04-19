@@ -8,16 +8,25 @@ namespace Kana
 {
     public class Square
     {
-        private int Number { get; set; }
-        private int NextPos { get; set; }
-        private bool Type { get; set; }
+        private int Number { get; }
+        private int NextPos { get; }
+        private bool Type { get; }
 
+        /**
+         * <summary>Initializes a new instance of the Square class</summary>
+         * <param name="number">An Integer with the square number in the board</param>         
+         */
         public Square(int number)
         {
             Number = number;
             Type = false;
         }
 
+        /**
+         * <summary>Initializes a new instance of the Square class</summary>
+         * <param name="number">An Integer with the square number in the board</param>
+         * <param name="nextPos">An Integer with the new position this square transport the player</param>
+         */
         public Square(int number, int nextPos)
         {
             Number = number;
