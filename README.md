@@ -1,11 +1,9 @@
-# KanaGame
-Minigame created with dotnet. Game consists of two or more players that have to climb up a board
-while facing obstacles like snakes, that will make the player go down, or some forgotten ladders
-which will make the journey easier.
+# The exercice
+This is a kata solution (https://github.com/VoxelGroup/Katas.Code.SnakesAndLadders), we want to have a technical discussion about this solution with you.
 
-# How to run it?
-Inside Kana folder run the following command:
-dotnet run
+You should read the description of the kata, then review the code and prepare the points that you think could be improved. You can answer questions like:
+What do you think we should improve in the code?
+What do you think the repository is missing something?
+Do you think the code correctly implements the features?
 
-For tests, inside KanaTest folder run the following command:
-dotnet test
+During the interview you will change some part of the code, with some new feature or fixing some point of improvement.
